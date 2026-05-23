@@ -1,3 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    /* Sfondo blu notte con sfumatura radiale che richiama lo stadio illuminato */
+    background: radial-gradient(circle at center, #0a2540 0%, #051329 100%);
+    color: #e0e6ed;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+header {
+    padding: 25px 40px;
+    background: rgba(5, 19, 41, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    /* Colore oro sfumato */
+    background: linear-gradient(135deg, #ffe082 0%, #d4af37 50%, #aa7c11 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.logo span {
+    font-weight: 300;
+    color: #ffffff;
+    -webkit-text-fill-color: #ffffff;
+}
+
+.hero {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.badge {
+    background: rgba(212, 175, 55, 0.1);
+    border: 1px solid #d4af37;
+    color: #ffe082;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: 3.2rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.2;
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    color: #a0aec0;
+    line-height: 1.6;
+    margin-bottom: 45px;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 16px 35px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.download {
+    /* Bottone Oro Lucido */
+    background: linear-gradient(135deg, #ffe082 0%, #d4af37 100%);
+    color: #051329;
+    box-shadow: 0 4px 15px rgba(214, 175, 55, 0.3);
+}
+
+.download:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(214, 175, 55, 0.5);
+}
+
+.donate {
+    /* Bottone Trasparente con bordo Oro */
+    background: transparent;
+    color: #ffe082;
+    border: 1px solid rgba(214, 175, 55, 0.5);
+}
+
+.donate:hover {
+    background: rgba(214, 175, 55, 0.1);
+    border-color: #d4af37;
+    transform: translateY(-3px);
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    font-size: 0.85rem;
+    color: #718096;
+    border-top: 1px solid rgba(212, 175, 55, 0.1);
+    background: #040e1e;
+}
+
+/* Ottimizzazione per dispositivi mobili */
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .subtitle {
+        font-size: 1.1rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
 /* Stile Sezione Storia */
 .story-section {
     margin-top: 80px;
