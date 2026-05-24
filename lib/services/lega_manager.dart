@@ -13,11 +13,13 @@ void popolaLegaConBot(int numeroBot) {
       isBot: true,
     );
 
-    // 2. Crea il DNA segreto (l'Opzione A che abbiamo appena scritto)
+    // 2. Crea il DNA segreto
     BotConfig config = BotConfig.autoGenera(idBot);
 
     // 3. Salva tutto nello stato della lega
     StatoLega.addPartecipante(p);
-    StatoLega.addBotConfig(idBot, config);
+
+    // CORREZIONE: Passiamo solo l'oggetto config che contiene già tutto il DNA del bot
+    StatoLega.addBotConfig(config);
   }
 }
