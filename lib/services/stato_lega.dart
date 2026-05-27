@@ -20,6 +20,12 @@ class StatoLega {
   // Liste dei nomi squadre della lega (per i dropdown)
   static List<String> nomiSquadreLega = [];
 
+  // Lista dei partecipanti della lega (Umani + Bot)
+  static List<Partecipante> partecipantiLega = [];
+
+  // Lista per salvare le configurazioni dei Bot della lega
+  static List<dynamic> listaBotConfigs = [];
+
   // Funzione rapida per controllare se un reparto è pieno
   static bool isRepartoPieno(String ruolo) {
     int attuali = rosaUtente.where((g) => g.ruolo == ruolo).length;
@@ -41,12 +47,15 @@ class StatoLega {
     BudgetService.aggiungi(giocatore.prezzoAcquisto ?? 0);
   }
 
-  // Lista dei partecipanti della lega
-  static List<Partecipante> partecipantiLega = [];
+  // Aggiunto il metodo richiesto da LegaManager (Etichetta rimossa)
+  static void addPartecipante(Partecipante partecipante) {
+    partecipantiLega.add(partecipante);
+  }
 
-  static Null get partecipanti => null;
-
-  static Null get botConfigs => null;
+  // Aggiunge la configurazione di un bot alla lega
+  static void addBotConfig(dynamic config) {
+    listaBotConfigs.add(config);
+  }
 
   static String getNomeSquadra(String id) {
     // Cerca tra i partecipanti (Umani + Bot) e restituisce il nome
